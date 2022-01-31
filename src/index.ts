@@ -1,5 +1,11 @@
-const sales: number[] = [10, 40, 50];
+import express from 'express';
 
-const message = `Sales January ${sales[0]}`;
+const app = express();
 
-console.log(message);
+app.get('/', (req, res) => {
+    res.send('Well done!');
+})
+
+app.listen(3000, () => {
+    console.log('The application is listening on port 3000!');
+})
